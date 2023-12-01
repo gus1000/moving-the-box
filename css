@@ -1,0 +1,39 @@
+body {
+  background: #14665e;
+  margin: 0;
+  padding: 0;
+}
+
+.rectangle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 25%;
+  background: black;
+  height: 120px;
+  width: 100%;
+}
+
+.box {
+  position: relative;
+  background: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  transition: all 1s ease-in-out;
+}
+
+.button-container {
+  padding-top: 100px;
+  padding-left: 500px;
+  opacity: 55%;
+  width: 67px;
+  height: 20px;
+}
+
+.button {
+  height: 40px;
+  background: #14665e;
+  color: white;
+  border-radius: 5px;
+}
