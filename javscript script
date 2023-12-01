@@ -1,0 +1,86 @@
+const box = document.querySelector(".box");
+
+const button = document.querySelector(".button");
+
+const rectangle = document.querySelector(".rectangle-container");
+
+const rectangleStyle = getComputedStyle(rectangle); //this is the width with units of px 's.'
+const rectangleWidth = parseInt(
+  rectangleStyle.getPropertyValue("width").replace("px", " ")
+);
+
+let count = 0;
+
+//THe problem is, the box gets shifted out of its parent container.
+
+// This is a string initially. So it is neccessary to remove the "px" from the string, and convert it into an integer with the  ParseInt method.
+
+// console.log(rectangleWidth);
+// let count = 0;
+
+//    // this block of code below moves the box from left to right
+
+// button.addEventListener("click", function () {
+//   if (count % 2 === 0) {
+//     box.style.left = `${rectangleWidth - 100 }px `;
+//     count++;
+//     console.log(count)
+//   } else {
+//     box.style.left = `0px `;
+//     count++;
+//   }
+// });
+
+//we want to move this box every 200 - 300 pxs, for example, and change the box color
+//if its position is 0 < x < max container width, shift to the right. Otherwise, shift to the left
+
+ 
+  button.addEventListener("mouseover" , function() {
+    button.style.backgroundColor = "#a9a9a9";
+    button.style.color = "black";
+  })
+  
+button.addEventListener("mouseout" , function() {
+    button.style.backgroundColor = "";
+    button.style.color = "";
+  })
+
+
+button.addEventListener("click", function () {
+  
+  // The global variable count is used to alternate the box from left to right. If the count% 2 === 0 , it translates all the way to the right and vice versa.
+  
+  if (count % 2 === 0) {
+    
+      box.style.transform = `translatex(calc(100vw - 100px)`;
+      box.style.backgroundColor = `blue`;
+    
+    count ++
+    
+
+    
+    
+  } else {
+          box.style.transform = `translatex(0)`;
+          box.style.backgroundColor = `red`;
+
+    count ++
+
+    
+  }
+  
+  
+  
+ 
+    
+
+  
+    
+
+    
+  
+ 
+  
+  
+});
+ 
